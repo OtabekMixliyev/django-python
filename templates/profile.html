@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Profilingiz{% endblock title%}
+
+{% block content %}
+    <h2>Profilingiz</h2> <hr>
+         <h5>Foydalanuvchi: {{ user.username }}</h5>
+         <h5>Ismingiz: {{ user.username }}</h5>
+         <h5>Familiyangiz: {{ user.username }}</h5>
+         <h5>Emailingiz: {{ user.email }}</h5>
+         <h5>Yoshingiz: {{ user.age }}</h5>
+     <div>
+          <img src="/media/world.webp" style="height: 300px width: 300px">
+     </div>
+{% endblock content %}

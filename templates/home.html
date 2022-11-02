@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}Bosh sahifa{% endblock title%}
+
+{% block content %}
+    {% if user.is_authenticated %}
+         <div class="container p-3 fw-normal">
+         <h1  class="fw-bold" >A few information about world languages. If you want to know more information click languages</h1>
+            <h2>Arabic</h2>
+    Arabic has been described by Salikoko Mufwene as a world language—albeit a second-tier one after English and French due to limited use as a lingua franca—on the grounds that is a liturgical language amongst Muslim communities worldwide. Mohamed Benrabah criticizes this argument due to use of the language in rituals not necessarily translating into spoken proficiency  religious contexts, but nevertheless categorizes it as a world language on the grounds of it being a supercentral language in de Swaan's global language system.
+
+            <h2>English</h2>
+    See also: World English
+    Academic consensus is that English is a world language, with some authors such as British linguists David Crystal and David Graddol going so far as to consider it the only one. Authors who take a pluralist approach nevertheless consider English to inhabit a unique position as the foremost world language; for instance, in Abram de Swaan's global language system, English is the sole occupant of the highest position in the hierarchy: the hypercentral language. According to German sociolinguist Ulrich Ammon [de], "[t]here is virtually no descriptive parameter or indicator for the international or global rank of a language which, if applied to today's languages worldwide, does not place English at the top".Ammon and Mufwene both posit that what sets English apart as the foremost world language is its use as a lingua franca, whereas Crystal focuses on its geographical distribution.
+
+            <h2>French</h2>
+    French has been described as a world language due to its status as a supercentral language in de Swaan's global language system, and Salikoko Mufwene characterizes it as such based on it being spoken as a lingua franca or vernacular by people neither ethnically nor nationally associated with it outside of France.
+
+           <h2>Russion</h2>
+    Russian has been categorized as a world language on the grounds of being a supercentral language in de Swaan's global language system,and is characterised as a world language by Salikoko Mufwene on the grounds that it is used as a vernacular or lingua franca outside of Russia by non-Russians.
+
+           <h2>Spanish</h2>
+    Spanish has been categorized as a world language on the grounds of being a supercentral language in de Swaan's global language system, and is considered a world language by German sociolinguist Ulrich Ammon [de] as it is spoken as a foreign language worldwide. Salikoko Mufwene also considers it a world language—albeit a second-tier one after English and French due to limited use as a lingua franca—on the grounds that it is used as a vernacular by people neither ethnically nor nationally associated with it outside of Spain.
+            <h2>German</h2>
+        The Germanic languages are a branch of the Indo-European language family spoken natively by a population of about 515 million people mainly in Europe, North America, Oceania and Southern Africa. The most widely spoken Germanic language, English, is also the world's most widely spoken language with an estimated 2 billion speakers. All Germanic languages are derived from Proto-Germanic, spoken in Iron Age Scandinavia.
+
+The West Germanic languages include the three most widely spoken Germanic languages: English with around 360–400 million native speakers; German, with over 100 million native speakers; and Dutch, with 24 million native speakers. Other West Germanic languages include Afrikaans, an offshoot of Dutch, with over 7.1 million native speakers; Low German, considered a separate collection of unstandardized dialects, with roughly 4.35–7.15 million native speakers and probably 6.7–10 million people who can understand it(at least 2.2 million in Germany (2016) and 2.15 million in the Netherlands (2003));Yiddish, once used by approximately 13 million Jews in pre-World War II Europe, now with approximately 1.5 million native speakers; Scots, with 1.5 million native speakers; Limburgish varieties with roughly 1.3 million speakers along the Dutch–Belgian–German border; and the Frisian languages with over 500,000 native speakers in the Netherlands and Germany
+        </div>
+            <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+         <img src="../media/i" style="height: 500px; width: 1200px;">
+    </div>
+
+    <div class="carousel-item">
+        <img src="../media/german.webp" style="height: 500px; width: 1200px;">
+    </div>
+
+       <div class="carousel-item">
+     <img src="../media/arabic.webp" style="height: 500px; width: 1200px;">
+       </div>
+
+      <div class="carousel-item">
+          <img src="../media/russion.webp" style="height: 500px; width: 1200px;">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../media/spanish.webp" style="height: 500px; width: 1200px;">
+      </div>
+
+      <div class="carousel-item">
+        <img src="../media/fransuz.webp" style="height: 500px; width: 1200px;">
+      </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </div>
+        </div>
+
+    {% else %}
+            <h1>Saytga kirmagansiz</h1>
+            <a href="{% url 'login' %}">Kirish</a>
+            <a href="{% url 'signup' %}">Ro`yxatdan o`tish</a>
+
+
+
+ {% endif %}
+{% endblock content %}
